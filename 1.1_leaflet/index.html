@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+ <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+   integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+   crossorigin=""></script>
+   
+   <!-- <link rel="stylesheet" href="../css/LeafletAPI.css"> -->
+   <!-- <script type="text/javascript" src="../js/LeafletMap.js"></script> -->
+   
+		<title>第一个leaflet地图</title>
+	</head>
+	<body >
+		<div id="mapid" style="height: 50rem;"></div>
+	</body>
+
+<script>
+    var mymap = L.map('mapid').setView([30.56486, 114.353622], 13);
+        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        maxZoom: 18,
+        id: 'mapbox.streets',
+        accessToken: 'pk.eyJ1IjoiYWRtaW5lciIsImEiOiJjanZ1djV1cXcxZHNuM3ptc2J1ZnN4ejR1In0.ZmBnMj6Op2TVkLKPT_iQmA'
+    }).addTo(mymap);
+</script>
+</html>
